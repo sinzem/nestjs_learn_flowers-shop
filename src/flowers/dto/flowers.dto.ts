@@ -1,7 +1,7 @@
 import {IsString, IsNumber} from "class-validator";
 
 /* (транспортировочный класс для создания записи в таблице, кроме типов проводим валидацию, можем прописать сообщения для ошибок) */
-export class FlowersCreateDto {
+export class CreateFlowersDto {
     @IsString({
         message: "This is not string"
     })
@@ -15,4 +15,6 @@ export class FlowersCreateDto {
 }
 
 /* (создаем тип для обновления таблицы на основе имеющегося) */
-export type TFlowersUpdateDto = Partial<FlowersCreateDto>
+export type TUpdateFlowersDto = Partial<CreateFlowersDto>
+
+// применяем в контроллере или в сервисах

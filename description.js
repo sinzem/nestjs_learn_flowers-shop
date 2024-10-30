@@ -23,3 +23,9 @@
 
 
 // npm i --save class-validator class-transformer  - для валидации и трансформации
+
+// npm i --save @nestjs/config  - для работы с файлами конфигурации
+
+// npm i --save @nestjs/microservices  - для работы с микросервисами(подключаем в main.ts)
+        // npx nest g res microservice --no-spec  - генерируем микросервис
+
