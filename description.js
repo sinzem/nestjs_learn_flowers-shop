@@ -27,5 +27,9 @@
 // npm i --save @nestjs/config  - для работы с файлами конфигурации
 
 // npm i --save @nestjs/microservices  - для работы с микросервисами(подключаем в main.ts)
-        // npx nest g res microservice --no-spec  - генерируем микросервис
+        // npx nest g res microservice --no-spec  - генерируем микросервис(при генерации предлагается выбор опций, выбираем путь microservice)
+        // сам микросервис подключаем к основному в main.ts, app.controller и app.service
 
+
+// npm i @nestjs/graphql @nestjs/apollo @apollo/server graphql  - для использования graphql
+        // npx nest g res flowers-graphql --no-spec  - генерируем модуль с graphql

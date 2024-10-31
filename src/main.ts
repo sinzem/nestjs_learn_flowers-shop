@@ -3,14 +3,24 @@ import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  // const app = await NestFactory.create(AppModule); /* (no microservice) */
-  const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {
-    transport: Transport.TCP 
-  }) /* (пример создания приложения как микросервиса) */
+  const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix("api");
+  await app.listen(4200);
+  console.log("HTTP app is listening on port 4200");
 
-  // app.setGlobalPrefix("api")  /* (no microservice) */
+  /* (подключение микросервиса) */
+  const microserviceApp = await NestFactory.createMicroservice<MicroserviceOptions>(
+    AppModule,
+    {
+      transport: Transport.TCP,
+      options: {
+        host: "localhost",
+        port: 8877
+      }
+    }
+  )
 
-  /* await app.listen(process.env.PORT ?? 4200); */ /* (no microservice) */
-  await app.listen()
+  await microserviceApp.listen();
+  
 }
 bootstrap();
