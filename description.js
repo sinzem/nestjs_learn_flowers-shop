@@ -32,4 +32,15 @@
 
 
 // npm i @nestjs/graphql @nestjs/apollo @apollo/server graphql  - для использования graphql
-        // npx nest g res flowers-graphql --no-spec  - генерируем модуль с graphql
+        /* (дополнительно установил GraphQL: Language Feature Support
+        - расширение для VSCode и создаем схему(scjema.gql) в src) */
+        // подключаем в app.module
+        // npx nest g res flowers-graphql --no-spec  - генерируем модуль с graphql (в д.с при создании выбрали опции code first и no-crud)
+        // по адресу http://localhost:4200/graphql - (подставляем порт приложения) можно открыть playground для визуализации запросов
+                        // Пример запроса в playground 
+                        // query someName {  (запрос с любым именем)
+                        //     flowers {  (таблица)
+                        //         name   (любые нужные поля - Ctrl+Space - список доступных)
+                        //         color
+                        //     }
+                        // }

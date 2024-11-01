@@ -7,6 +7,7 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   controllers: [FlowersController],
   providers: [FlowersService, PrismaService, ConfigModule],
-  imports: []
+  imports: [],
+  exports: [FlowersService]
 })
 export class FlowersModule {}
