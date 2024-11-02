@@ -44,3 +44,14 @@
                         //         color
                         //     }
                         // }
+
+
+// npm i --save @nestjs/websockets socket.io  - для работы с вебсокетами
+// npm i --save @nestjs/platform-socket.io
+        // на постмане отрабатывает на http://localhost:4200 (в типе передачи выбираем Socket.io)
+        
+
+// npm i --save-dev @nestjs/testing  - для тестирования
+// npm i supertest
+
+
