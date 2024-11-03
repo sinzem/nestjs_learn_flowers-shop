@@ -1,7 +1,7 @@
 import { INestApplication, ValidationPipe } from "@nestjs/common"
 import { Test, TestingModule } from "@nestjs/testing";
 import * as request from "supertest";
-import { AppModule } from "src/app.module";
+import { AppModule } from "../app.module";
 
 describe("FlowersController (e2e)", () => {
     let app: INestApplication;
@@ -18,7 +18,7 @@ describe("FlowersController (e2e)", () => {
 
     it("/flowers (GET)", () => {
         return request(app.getHttpServer())
-                .get("/flowwers")
+                .get("")
                 .expect(200)
                 .expect([
                     {
@@ -44,6 +44,46 @@ describe("FlowersController (e2e)", () => {
                         "price": 12,
                         "createdAt": "2024-10-30T21:08:55.231Z",
                         "updatedAt": "2024-10-30T21:08:55.231Z"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Pion",
+                        "color": "pink",
+                        "price": 10,
+                        "createdAt": "2024-11-02T16:36:55.520Z",
+                        "updatedAt": "2024-11-02T16:36:55.520Z"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Carnation",
+                        "color": "crimson",
+                        "price": 5,
+                        "createdAt": "2024-11-02T17:47:44.282Z",
+                        "updatedAt": "2024-11-02T17:47:44.282Z"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Sunflower",
+                        "color": "yellow",
+                        "price": 8,
+                        "createdAt": "2024-11-02T19:45:57.216Z",
+                        "updatedAt": "2024-11-02T19:45:57.216Z"
+                    },
+                    {
+                        "id": 7,
+                        "name": "Carnation",
+                        "color": "crimson",
+                        "price": 5,
+                        "createdAt": "2024-11-02T19:47:35.870Z",
+                        "updatedAt": "2024-11-02T19:47:35.870Z"
+                    },
+                    {
+                        "id": 8,
+                        "name": "Sunflower",
+                        "color": "yellow",
+                        "price": 8,
+                        "createdAt": "2024-11-02T19:49:31.149Z",
+                        "updatedAt": "2024-11-02T19:49:31.149Z"
                     }
                 ])
     })

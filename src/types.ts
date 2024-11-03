@@ -3,3 +3,4 @@ export enum EnumAppMode {
     PROD = "production",
     TEST = "test"
 } /* (пример для получения через config в сервисах) */
+
